@@ -1,0 +1,68 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FDFBF8;
+    color: #4A4A4A;
+}
+.nav-link {
+    transition: color 0.3s, border-color 0.3s;
+}
+.nav-link.active {
+    color: #3B82F6;
+    border-bottom-color: #3B82F6;
+}
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.flashcard-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+}
+.flashcard-front, .flashcard-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flashcard-back {
+    transform: rotateY(180deg);
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    max-height: 400px;
+}
+@media (min-width: 768px) {
+    .chart-container {
+        height: 400px;
+    }
+}
+.perspective-1000 { perspective: 1000px; }
+
+/* Session-specific background colors */
+.session-1-card {
+    background-color: #FFF9F4; /* Light Peach */
+}
+.session-2-card {
+    background-color: #F4FCF9; /* Light Mint */
+}
+.session-3-card {
+    background-color: #F7F5FC; /* Light Lavender */
+}

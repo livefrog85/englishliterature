@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>English literature Lesson Plan</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Lesson Plan: The Giver</title>
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: The SPA is designed as a single-page, vertical-scrolling application with a fixed navigation header. The structure is chronological, divided into three clear sections corresponding to the three lesson plan sessions. This linear, top-to-bottom flow was chosen because it directly mirrors the way a teacher would progress through the material, making it highly intuitive and eliminating the need for complex navigation. Key interactions like vocabulary flashcards and collapsible discussion points are embedded directly within the procedural steps to provide contextually relevant tools without cluttering the UI. This structure prioritizes ease of use and pedagogical clarity for the target user (an educator). -->
+    <!-- Visualization & Content Choices: 
+        1. Report Info: Vocabulary Lists -> Goal: Inform/Learn -> Viz: Interactive Flashcards (HTML/CSS/JS) -> Interaction: Click to reveal definition -> Justification: Promotes active recall over passive reading, a more effective learning strategy. Library: Vanilla JS.
+        2. Report Info: Discussion Questions -> Goal: Organize/Present -> Viz: Collapsible Accordion Blocks (HTML/CSS/JS) -> Interaction: Click to expand/collapse -> Justification: Keeps the UI tidy, allowing the teacher to focus on one question at a time without being overwhelmed by text. Library: Vanilla JS.
+        3. Report Info: Core Themes (Individuality, Memory, Choice, Control) -> Goal: Synthesize/Compare -> Viz: Bar Chart (Chart.js/Canvas) -> Interaction: Hover to see theme emphasis -> Justification: Provides a high-level visual summary of the lesson's pedagogical focus, emphasizing the relative importance of each core theme discussed in the activities. Library: Chart.js.
+        4. Report Info: Debate Points -> Goal: Compare -> Viz: Side-by-side toggleable columns (HTML/CSS/JS) -> Interaction: Click to reveal arguments -> Justification: Clearly presents the two opposing viewpoints for the debate in a structured, easy-to-compare format. Library: Vanilla JS. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-40 w-full border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <h1 class="text-xl md:text-2xl font-bold text-gray-800">The Giver: Interactive Plan</h1>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#session1" class="nav-link text-gray-600 hover:text-blue-500 border-b-2 border-transparent pb-1">Session 1</a>
+                    <a href="#session2" class="nav-link text-gray-600 hover:text-blue-500 border-b-2 border-transparent pb-1">Session 2</a>
+                    <a href="#session3" class="nav-link text-gray-600 hover:text-blue-500 border-b-2 border-transparent pb-1">Session 3</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Lesson Plan for Korean EFL High School Students</h2>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">This interactive plan translates the three-session guide for teaching "The Giver" into a dynamic experience. The goal is to enhance reading comprehension, critical thinking, and personal connection to the novel's themes of individuality, memory, choice, and societal control.</p>
+        </div>
+
+        <!-- Session 1 -->
+        <section id="session1" class="mb-16 scroll-mt-20">
+            <div class="card session-1-card p-6 md:p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Session 1: Introduction & Setting the Stage</h3>
+                <p class="text-gray-500 mb-6">Chapters 1-5</p>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-semibold text-lg text-gray-700 mb-3">Objectives</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>Identify key characters and the initial setting of Jonas's community.</li>
+                            <li>Understand the concept of "Sameness" and its implications.</li>
+                            <li>Begin to reflect on their own ideas of a perfect society.</li>
+                            <li>Expand vocabulary related to the initial chapters.</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-lg text-gray-700 mb-3">Vocabulary Flashcards</h4>
+                        <p class="text-gray-600 mb-4">Click on each card to reveal its meaning. This activity helps students actively learn and recall new terms from the first five chapters.</p>
+                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                            <div class="flashcard perspective-1000" onclick="this.classList.toggle('flipped')">
+                                <div class="flashcard-inner relative w-full h-32">
+                                    <div class="flashcard-front absolute w-full h-full flex items-center justify-center bg-blue-100 text-blue-800 p-2 rounded-lg shadow cursor-pointer">
+                                        <span class="text-center font-semibold">Apprehensive</span>
+                                    </div>
+                                    <div class="flashcard-back absolute w-full h-full flex items-center justify-center bg-blue-200 text-blue-900 p-2 rounded-lg shadow cursor-pointer">
+                                        <p class="text-sm text-center">Anxious or fearful that something bad will happen.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flashcard perspective-1000" onclick="this.classList.toggle('flipped')">
+                                <div class="flashcard-inner relative w-full h-32">
+                                    <div class="flashcard-front absolute w-full h-full flex items-center justify-center bg-blue-100 text-blue-800 p-2 rounded-lg shadow cursor-pointer">
+                                        <span class="text-center font-semibold">Chastisement</span>
+                                    </div>
+                                    <div class="flashcard-back absolute w-full h-full flex items-center justify-center bg-blue-200 text-blue-900 p-2 rounded-lg shadow cursor-pointer">
+                                        <p class="text-sm text-center">The act of scolding or punishing someone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="flashcard perspective-1000" onclick="this.classList.toggle('flipped')">
+                                <div class="flashcard-inner relative w-full h-32">
+                                    <div class="flashcard-front absolute w-full h-full flex items-center justify-center bg-blue-100 text-blue-800 p-2 rounded-lg shadow cursor-pointer">
+                                        <span class="text-center font-semibold">Release</span>
+                                    </div>
+                                    <div class="flashcard-back absolute w-full h-full flex items-center justify-center bg-blue-200 text-blue-900 p-2 rounded-lg shadow cursor-pointer">
+                                        <p class="text-sm text-center">In the community, a term for death, which is hidden from citizens.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flashcard perspective-1000" onclick="this.classList.toggle('flipped')">
+                                <div class="flashcard-inner relative w-full h-32">
+                                    <div class="flashcard-front absolute w-full h-full flex items-center justify-center bg-blue-100 text-blue-800 p-2 rounded-lg shadow cursor-pointer">
+                                        <span class="text-center font-semibold">Ceremony of Twelve</span>
+                                    </div>
+                                    <div class="flashcard-back absolute w-full h-full flex items-center justify-center bg-blue-200 text-blue-900 p-2 rounded-lg shadow cursor-pointer">
+                                        <p class="text-sm text-center">A major event where 12-year-olds are assigned their lifelong jobs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-lg text-gray-700 mb-3">Interactive Discussion Points</h4>
+                        <p class="text-gray-600 mb-4">Click each question to expand it. This allows for a focused classroom discussion, guiding students through the key concepts of the initial chapters.</p>
+                        <div class="space-y-2">
+                           <div class="accordion-item border rounded-lg">
+                                <button class="accordion-header w-full text-left p-4 font-medium text-gray-700 hover:bg-gray-50 flex justify-between items-center">
+                                    <span>What are your first impressions of Jonas's community?</span>
+                                    <span class="accordion-icon transform transition-transform duration-300">▼</span>
+                                </button>
+                                <div class="accordion-content p-4 pt-0 text-gray-600">
+                                    <p>Encourage students to think about the order, predictability, and lack of emotion. Prompt them with ideas like "sameness," family units, and strict rules. Contrast this with their own society.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item border rounded-lg">
+                                <button class="accordion-header w-full text-left p-4 font-medium text-gray-700 hover:bg-gray-50 flex justify-between items-center">
+                                    <span>What do you think 'release' means?</span>
+                                    <span class="accordion-icon transform transition-transform duration-300">▼</span>
+                                </button>
+                                <div class="accordion-content p-4 pt-0 text-gray-600">
+                                    <p>At this stage, let students predict freely. Common guesses might be banishment, being sent to another community, or a special celebration. This builds suspense for the later reveal.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Session 2 -->
+        <section id="session2" class="mb-16 scroll-mt-20">
+            <div class="card session-2-card p-6 md:p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Session 2: Deepening Understanding & Conflict</h3>
+                <p class="text-gray-500 mb-6">Chapters 6-15</p>
+
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-semibold text-lg text-gray-700 mb-3">Objectives</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>Analyze the significance of the Ceremony of Twelve and "Assignments."</li>
+                            <li>Explore themes of choice, emotion, and the burden of memory.</li>
+                            <li>Empathize with Jonas's experiences as the new Receiver.</li>
+                            <li>Connect the idea of memory to their own personal experiences.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-lg text-gray-700 mb-3">Personal Connection: The Weight of Memory</h4>
+                        <p class="text-gray-600 mb-4">Jonas receives both joyful and painful memories, highlighting the core themes of the novel. This chart visualizes the key concepts that students are encouraged to reflect upon in the "Memory I Cherish/Erase" activity, showing the balance between positive and negative aspects of a full life.</p>
+                        <div class="chart-container">
+                            <canvas id="themesChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-lg text-gray-700 mb-3">Interactive Discussion Points</h4>
+                        <p class="text-gray-600 mb-4">Expand the questions to explore the central conflicts and character developments in this section of the book.</p>
+                        <div class="space-y-2">
+                           <div class="accordion-item border rounded-lg">
+                                <button class="accordion-header w-full text-left p-4 font-medium text-gray-700 hover:bg-gray-50 flex justify-between items-center">
+                                    <span>Why is Jonas's Assignment so unusual?</span>
+                                    <span class="accordion-icon transform transition-transform duration-300">▼</span>
+                                </button>
+                                <div class="accordion-content p-4 pt-0 text-gray-600">
+                                    <p>Discuss the high honor, but also the isolation and pain associated with it. Talk about the rules he receives, especially the one allowing him to lie. How does this separate him from everyone else?</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item border rounded-lg">
+                                <button class="accordion-header w-full text-left p-4 font-medium text-gray-700 hover:bg-gray-50 flex justify-between items-center">
+                                    <span>Why does the community choose not to have memories?</span>
+                                    <span class="accordion-icon transform transition-transform duration-300">▼</span>
+                                </button>
+                                <div class="accordion-content p-4 pt-0 text-gray-600">
+                                    <p>Guide students to understand that the community gave up deep emotions, choice, and color to gain safety and predictability. They avoided pain, but also lost true joy. Ask students if they think this is a fair trade.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Session 3 -->
+        <section id="session3" class="mb-16 scroll-mt-20">
+            <div class="card session-3-card p-6 md:p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Session 3: Climax, Resolution & Application</h3>
+                <p class="text-gray-500 mb-6">Chapters 16-End</p>
+                
+                 <div class="space-y-6">
+                    <div>
+                        <h4 class="font-semibold text-lg text-gray-700 mb-3">Objectives</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>Analyze the climax and resolution of the novel.</li>
+                            <li>Evaluate Jonas's final decision and its implications.</li>
+                            <li>Synthesize personal learning and apply themes to real-world scenarios.</li>
+                            <li>Express understanding through creative reflection.</li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h4 class="font-semibold text-lg text-gray-700 mb-3">Debate: "Should Jonas Have Left?"</h4>
+                        <p class="text-gray-600 mb-4">This activity encourages critical thinking and argumentation. Click the buttons below to reveal the core arguments for each side of the debate, providing a clear framework for discussion.</p>
+                        <div class="flex space-x-4 mb-4">
+                            <button id="showForBtn" class="flex-1 bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition">Show 'FOR' Arguments</button>
+                            <button id="showAgainstBtn" class="flex-1 bg-red-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-600 transition">Show 'AGAINST' Arguments</button>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div id="forArguments" class="hidden p-4 bg-green-50 border border-green-200 rounded-lg">
+                                <h5 class="font-bold text-lg text-green-800 mb-2">FOR Leaving</h5>
+                                <ul class="list-disc list-inside space-y-1 text-green-700">
+                                    <li>He chose freedom over safety.</li>
+                                    <li>He was saving Gabe's life.</li>
+                                    <li>He wanted to give memories (and feelings) back to the community.</li>
+                                    <li>He could no longer live a lie.</li>
+                                </ul>
+                            </div>
+                            <div id="againstArguments" class="hidden p-4 bg-red-50 border border-red-200 rounded-lg">
+                                <h5 class="font-bold text-lg text-red-800 mb-2">AGAINST Leaving</h5>
+                                <ul class="list-disc list-inside space-y-1 text-red-700">
+                                    <li>He abandoned his family and friends.</li>
+                                    <li>The memories could cause chaos and pain for the community.</li>
+                                    <li>He faced unknown, potentially lethal dangers.</li>
+                                    <li>Was it his right to make that choice for everyone?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg text-gray-700 mb-3">Final Discussion: The Ending</h4>
+                        <p class="text-gray-600 mb-4">The novel's ambiguous ending is a powerful point for discussion. Use these questions to guide a final conversation about its meaning.</p>
+                        <div class="space-y-2">
+                           <div class="accordion-item border rounded-lg">
+                                <button class="accordion-header w-full text-left p-4 font-medium text-gray-700 hover:bg-gray-50 flex justify-between items-center">
+                                    <span>What do you think happens at the very end of the book?</span>
+                                    <span class="accordion-icon transform transition-transform duration-300">▼</span>
+                                </button>
+                                <div class="accordion-content p-4 pt-0 text-gray-600">
+                                    <p>Explore the two main interpretations: 1) Jonas and Gabe find a real, welcoming village ('Elsewhere'). 2) Jonas is succumbing to hypothermia and the final scene is a hallucination or memory as he dies. There is no right answer; encourage students to support their opinion with evidence from the text.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="text-center p-6 mt-8 border-t border-gray-200">
+        <p class="text-gray-500">Interactive Lesson Plan created from the EFL guide for "The Giver".</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
